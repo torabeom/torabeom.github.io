@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Park EunSang's Portfolio</title>
+    <title>Wonbeom Cheon's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>EunSang Park</h1>
-        <p>Data Scientist · Analyst / Backend Developer</p>
+        <div class="intro">
+            <h1>Hello, I'm Wonbeom Cheon</h1>
+        </div>
     </header>
-    
+
     <section class="about">
         <h2>About Me</h2>
         <p>끊임없이 배움을 향해 나아가는 Passionate Person 입니다.</p>
@@ -26,9 +28,44 @@
         </ul>
     </section>
 
+    <section class="career">
+        <h2>Career</h2>
+        <div class="timeline">
+            <div class="timeline-event">
+                <h3>Core.Today - Data Analyst/Intern (2020)</h3>
+                <p>데이터 수집 및 데이터 분석</p>
+            </div>
+            <div class="timeline-event">
+                <h3>문화뉴스 - Reporter/Part time (2019)</h3>
+                <p>뉴스, 저널 작성</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project" onclick="showProjectDetails('project1')">
+                <h3>Movie Recommendation Site</h3>
+                <p>WEB-APPLICATION</p>
+            </div>
+            <div class="project" onclick="showProjectDetails('project2')">
+                <h3>Gender Classification Site</h3>
+                <p>WEB-APPLICATION</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>GitHub: <a href="https://github.com/parkeunsang">https://github.com/parkeunsang</a></p>
-        <p>Email: edwardfdsp@gmail.com</p>
+        <p>Email: c1035@kumoh.ac.kr</p>
     </footer>
+
+    <div id="project-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeProjectDetails()">&times;</span>
+            <div id="project-details"></div>
+        </div>
+    </div>
 </body>
 </html>
